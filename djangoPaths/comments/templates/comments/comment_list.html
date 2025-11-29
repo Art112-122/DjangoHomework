@@ -1,0 +1,16 @@
+<h2>Коментарі</h2>
+
+<a href="{% url 'comment_create' post_id=post_id %}">Додати коментар</a>
+
+<ul>
+    {% for comment in comments %}
+        <li>
+            <a href="{% url 'comment_detail' comment.id %}">
+                {{ comment.author }}: {{ comment.text|truncatewords:10 }}
+            </a>
+            <small>{{ comment.created_at }}</small>
+        </li>
+    {% empty %}
+        <p>Коментарів ще немає.</p>
+    {% endfor %}
+</ul>

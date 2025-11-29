@@ -1,0 +1,10 @@
+<h2>Видалити коментар?</h2>
+
+<p>{{ object.text }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+
+<a href="{% url 'comment_detail' object.id %}">Скасувати</a>
