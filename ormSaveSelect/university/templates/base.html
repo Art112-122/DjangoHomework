@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Student App{% endblock %}</title>
+    <link rel="stylesheet" href="/static/core/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'student_list' %}">Студенти</a>
+    <a href="{% url 'student_create' %}">Додати студента</a>
+</nav>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
