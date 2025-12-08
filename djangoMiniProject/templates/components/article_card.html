@@ -1,0 +1,6 @@
+<article class="article-card">
+  <h2><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></h2>
+  <p>Автор: {{ article.author.username }}</p>
+  <p>{{ article.content|truncatewords:20 }}</p>
+  <p>Опубліковано: {{ article.created_at|date:'d M Y H:i' }}</p>
+</article>

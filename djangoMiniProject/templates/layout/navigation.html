@@ -1,0 +1,14 @@
+<nav>
+  <a href="{% url 'articles:list' %}">Home</a>
+  {% if user.is_authenticated %}
+    Hello, {{ user.username|upper }} |
+    <a href="{% url 'articles:create' %}">Створити статтю</a> |
+    <form action="{% url 'accounts:logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Вихід</button>
+</form>
+  {% else %}
+    <a href="{% url 'accounts:login' %}">Вхід</a> |
+    <a href="{% url 'accounts:register' %}">Реєстрація</a>
+  {% endif %}
+</nav>

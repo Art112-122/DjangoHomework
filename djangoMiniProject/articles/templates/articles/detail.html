@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ article.title }}
+{% endblock %}
+
+{% block content %}
+  <article>
+    <h1>{{ article.title }}</h1>
+    <p>Автор: {{ article.author.username }}</p>
+    <p>Опубліковано: {{ article.created_at|date:'d M Y H:i' }}</p>
+    <div>{{ article.content|linebreaks }}</div>
+    <p>Довжина контенту: {{ article.content|length }} символів</p>
+  </article>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Список статей{% endblock %}
+
+
+{% block content %}
+<h1>Статті</h1>
+{% for article in page_obj %}
+{% include 'components/article_card.html' with article=article %}
+{% empty %}
+<p>Немає статей.</p>
+{% endfor %}
+
+
+{% include 'paginator.html' %}
+{% endblock %}

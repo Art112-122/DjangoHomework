@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      {% block title %}
+        Blog
+      {% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    {% include 'layout/navigation.html' %}
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    {% include 'layout/footer.html' %}
+  </body>
+</html>
