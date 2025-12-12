@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог продуктів</title>
+</head>
+<body>
+
+    {% include 'layout/navigation.html' %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include 'layout/footer.html' %}
+
+</body>
+</html>
