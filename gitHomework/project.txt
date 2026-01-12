@@ -2,6 +2,7 @@ Project: Gitю homework
 Version: 1
 
 Features:
-- Nothing
+- Base Structure
 - Login system
+- Remember me option
 
